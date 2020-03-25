@@ -1,6 +1,5 @@
 
-package Battleship.GUI;
-
+package battleship.gui;
 
 import battleship.text.TextMessages;
 import java.awt.Color;
@@ -126,6 +125,8 @@ public class StartMenu {
         return playerName;
     }
 }
+
+
 
 
 

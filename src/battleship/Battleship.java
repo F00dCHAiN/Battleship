@@ -1,7 +1,7 @@
 
 package battleship;
 
-import Battleship.GUI.StartMenu;
+import battleship.gui.StartMenu;
 
 final public class Battleship {
     public static void main(String[] args) {
@@ -13,6 +13,7 @@ final public class Battleship {
         System.out.println("---------------------");
     }
 }
+
 
 
 

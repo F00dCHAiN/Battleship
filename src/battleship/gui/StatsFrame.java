@@ -1,5 +1,5 @@
 
-package Battleship.GUI;
+package battleship.gui;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
@@ -59,6 +59,7 @@ public final class StatsFrame {
     }
     
 }
+
 
 
 

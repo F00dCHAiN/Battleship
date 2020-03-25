@@ -1,0 +1,4 @@
+Name: Player | Hits: 3 | Misses: 0
+Name: Sam | Hits: 3 | Misses: 0
+Name: Player | Hits: 1 | Misses: 3
+Name: dasdasdasd | Hits: 3 | Misses: 0

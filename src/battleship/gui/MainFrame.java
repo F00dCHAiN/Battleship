@@ -1,4 +1,4 @@
-package Battleship.GUI;
+package battleship.gui;
 
 import battleship.logic.HitReg;
 import battleship.logic.Ships;
@@ -151,13 +151,13 @@ public class MainFrame {
                     for (int k = 0; k < 9; k++) {
                         button[k].setEnabled(false);
                     }
-                    JOptionPane.showMessageDialog(null, TextMessages.getWinMessage(), "YOU WIN", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, TextMessages.getWinMessage() + "\n" + TextMessages.getStatsSaved(), "YOU WIN", JOptionPane.INFORMATION_MESSAGE);
                 }
                 if (hitReg.numOfMisses == hitReg.MAX_MISSES) {
                     for (int k = 0; k < 9; k++) {
                         button[k].setEnabled(false);
                     }
-                    JOptionPane.showMessageDialog(null, TextMessages.getLoseMessage(), "YOU LOSE", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(null, TextMessages.getLoseMessage() + "\n" +TextMessages.getStatsSaved(), "YOU LOSE", JOptionPane.INFORMATION_MESSAGE);
                 }
             }
         }
@@ -203,6 +203,9 @@ public class MainFrame {
         });
     }
 }
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 package battleship.logic;
 
-import Battleship.GUI.StartMenu;
+import battleship.gui.StartMenu;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -70,6 +70,7 @@ public class Stats {
         }
     }
 }
+
 
 
 
