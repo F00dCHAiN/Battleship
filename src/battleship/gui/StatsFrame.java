@@ -3,16 +3,16 @@ package Battleship.GUI;
 
 import java.awt.Color;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.BufferedReader;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import javax.swing.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
 
-public class StatsFrame {
+public final class StatsFrame {
     private JFrame frame;
     private JTextArea textArea;
     private JScrollPane scrollPane;
@@ -55,23 +55,12 @@ public class StatsFrame {
     }
     
     void deleteStats(){
-        deleteButton = new JButton("Delete");
-        deleteButton.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                try{
-                    File file = new File("Stats.txt");
-                    file.createNewFile();
-                    //file.deleteOnExit();
-                    JOptionPane.showMessageDialog(null, "File successfully deleted", "Stats", JOptionPane.INFORMATION_MESSAGE);
-                } catch(Exception exception){
-                    JOptionPane.showMessageDialog(null, exception, "Stats", JOptionPane.WARNING_MESSAGE);
-                }
-            }
-        });
-        frame.add(deleteButton);
+        
     }
     
 }
+
+
 
 
 

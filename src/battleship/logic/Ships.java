@@ -1,5 +1,5 @@
 
-package Battleship;
+package battleship.logic;
 
 public class Ships {
     final int MIN = 1;
@@ -45,6 +45,7 @@ public class Ships {
         }
     }  
 }
+
 
 
 

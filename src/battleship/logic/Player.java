@@ -1,5 +1,5 @@
 
-package Battleship;
+package battleship.logic;
 
 public class Player {
     int playerGuess;
@@ -13,6 +13,7 @@ public class Player {
         return playerGuess;
     }    
 }
+
 
 
 

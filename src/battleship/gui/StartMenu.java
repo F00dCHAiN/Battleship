@@ -2,13 +2,17 @@
 package Battleship.GUI;
 
 
-import Battleship.TextMessages;
+import battleship.text.TextMessages;
 import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 
 public class StartMenu {
@@ -50,29 +54,22 @@ public class StartMenu {
         exitButton.setCursor(startMenuCursor);
         aboutButton.setCursor(startMenuCursor);
         
-        startButton.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Start button");
-                setPlayerName();
-                System.out.println("Player Name: " + playerName);
+        startButton.addActionListener((ActionEvent e) -> {
+            System.out.println("Start button");
+            setPlayerName();
+            System.out.println("Player Name: " + playerName);
+        });
+        
+        exitButton.addActionListener((ActionEvent e) -> {
+            System.out.println("Exit button");
+            int choice = JOptionPane.showConfirmDialog(null, "Do you really want to exit?", "Exit", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if(choice == JOptionPane.YES_OPTION){
+                System.exit(0);
             }
         });
         
-        exitButton.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Exit button");
-                int choice = JOptionPane.showConfirmDialog(null, "Do you really want to exit?", "Exit", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
-                if(choice == JOptionPane.YES_OPTION){
-                    System.exit(0);
-                }
-            }
-            
-        });
-        
-        aboutButton.addActionListener(new ActionListener(){
-            public void actionPerformed(ActionEvent e) {
-                JOptionPane.showMessageDialog(null, TextMessages.getCredits(), "About", JOptionPane.INFORMATION_MESSAGE);
-            }
+        aboutButton.addActionListener((ActionEvent e) -> {
+            JOptionPane.showMessageDialog(null, TextMessages.getCredits(), "About", JOptionPane.INFORMATION_MESSAGE);
         });
         
         startButton.setBounds(190, 225, 100, 50);
@@ -117,9 +114,9 @@ public class StartMenu {
     }
     
     void setPlayerName(){
-        this.playerName = JOptionPane.showInputDialog(null,"Enter your name: ", "Player");
+        StartMenu.playerName = JOptionPane.showInputDialog(null,"Enter your name: ", "Player");
         if(playerName == null || playerName.equals("")){
-            this.playerName = "[No Player Name]";
+            StartMenu.playerName = "[No Player Name]";
         }
         frame.dispose();
         MainFrame mainFrame = new MainFrame();
@@ -129,6 +126,8 @@ public class StartMenu {
         return playerName;
     }
 }
+
+
 
 
 

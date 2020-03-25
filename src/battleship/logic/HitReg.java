@@ -1,5 +1,5 @@
 
-package Battleship;
+package battleship.logic;
 
 public class HitReg {
     final int MAX_HITS = 3;
@@ -61,6 +61,7 @@ public class HitReg {
         }
     }
 }
+
 
 
 

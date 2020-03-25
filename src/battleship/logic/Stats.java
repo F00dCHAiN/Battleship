@@ -1,4 +1,4 @@
-package Battleship;
+package battleship.logic;
 
 import Battleship.GUI.StartMenu;
 import java.io.File;
@@ -70,6 +70,7 @@ public class Stats {
         }
     }
 }
+
 
 
 

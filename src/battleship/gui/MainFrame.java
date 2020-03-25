@@ -1,18 +1,22 @@
 package Battleship.GUI;
 
-import Battleship.HitReg;
-import Battleship.Ships;
-import Battleship.Player;
-import Battleship.TextMessages;
+import battleship.logic.HitReg;
+import battleship.logic.Ships;
+import battleship.logic.Player;
+import battleship.text.TextMessages;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
-//import java.awt.event.ActionListener;
-import javax.swing.*;
+import javax.swing.JFrame;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.Image;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class MainFrame {
 
@@ -176,6 +180,9 @@ public class MainFrame {
         statsButton.setBackground(Color.LIGHT_GRAY);
         restartButton.setBackground(Color.LIGHT_GRAY);
         howToPlayButton.setBackground(Color.LIGHT_GRAY);
+        statsButton.setToolTipText("Click to see your stats");
+        restartButton.setToolTipText("Restart the game");
+        howToPlayButton.setToolTipText("Learn how to play the game");
 
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER, 80, 10));
         panel2.add(howToPlayButton);
@@ -196,6 +203,11 @@ public class MainFrame {
         });
     }
 }
+
+
+
+
+
 
 
 
