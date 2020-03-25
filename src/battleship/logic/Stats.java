@@ -47,11 +47,13 @@ public class Stats {
             fileWriter = new FileWriter("Stats.txt", true);
             write = new Formatter(fileWriter);
             write.format("Name: %s | Hits: %d | Misses: %d\r\n", StartMenu.getPlayerName(), hitStats, missStats);
-            write.close();
         }catch(FileNotFoundException e2){
             System.out.println("Unable to write to file. Exception: " + e2);
         }catch(IOException e2){
             System.out.println("Unable to write to file. Exception: " + e2);
+        }
+        finally{
+            write.close();
         }
     }
     
@@ -64,12 +66,15 @@ public class Stats {
                 
                 System.out.println(line);
             }
-            read.close();
         }catch(FileNotFoundException e3){
             System.out.println("Unable to read from the file. Exception: " + e3);
         }
+        finally{
+            read.close();
+        }
     }
 }
+
 
 
 
