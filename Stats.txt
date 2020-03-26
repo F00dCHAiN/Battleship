@@ -6,3 +6,6 @@ Name: Player | Hits: 1 | Misses: 3
 Name: [No Player Name] | Hits: 3 | Misses: 0
 Name: test | Hits: 2 | Misses: 3
 Name: [No Player Name] | Hits: 3 | Misses: 0
+Name: Player | Hits: 0 | Misses: 3
+Name: Player | Hits: 3 | Misses: 2
+Name: Player | Hits: 2 | Misses: 3

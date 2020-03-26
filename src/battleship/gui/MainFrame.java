@@ -104,7 +104,7 @@ public final class MainFrame {
         System.out.println("");
         //console log
 
-        class shipImgChanger {
+        final class shipImgChanger {
 
             shipImgChanger() {
                 switch (hitReg.numOfHits) {
@@ -203,6 +203,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 
