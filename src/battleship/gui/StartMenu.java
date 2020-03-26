@@ -23,7 +23,7 @@ public class StartMenu {
     private JTextField gitTextField;
     private Cursor startMenuCursor;
     private Cursor gitCursor;
-    private static String playerName = "Player";
+    private static String playerName;
     
     public StartMenu(){
         initComponents();
@@ -114,7 +114,7 @@ public class StartMenu {
     
     void setPlayerName(){
         StartMenu.playerName = JOptionPane.showInputDialog(null,"Enter your name: ", "Player");
-        if(playerName == null || playerName.equals("")){
+        if(playerName == null/*if user presses cancel button*/ || playerName.equals("")){
             StartMenu.playerName = "[No Player Name]";
         }
         frame.dispose();
@@ -125,6 +125,7 @@ public class StartMenu {
         return playerName;
     }
 }
+
 
 
 

@@ -1,16 +1,16 @@
 
 package battleship.logic;
 
-public class HitReg {
-    final int MAX_HITS = 3;
-    public final int MAX_MISSES = 3;
+public final class HitReg {
+    final int MAX_HITS = 3;////////////DO NOT
+    public final int MAX_MISSES = 3;///CHANGE THESE
     public boolean isSunk = false;
     boolean isHit = false;
     public int numOfHits = 0;
     public int numOfMisses = 0;
     Ships ships;
     Player player;
-    public boolean guiLabel;
+    public boolean guiLabel;//used in NumberButtonListener class
     
     public HitReg(Player player, Ships ships){
         setTarget(player, ships);
@@ -53,14 +53,15 @@ public class HitReg {
     void end(){
         if(isSunk == true){
             numOfHits = 0;
-            System.out.println("YOU WIN!");
+            System.out.println("YOU WIN!");//console log
         }
         else{
             numOfHits = 0;
-            System.out.println("YOU LOST!");
+            System.out.println("YOU LOST!");//console log
         }
     }
 }
+
 
 
 

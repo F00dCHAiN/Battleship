@@ -2,6 +2,7 @@
 package battleship.logic;
 
 public class Ships {
+    //dont change these
     final int MIN = 1;
     final int MAX = 9;
     final int MAX_SHIPS = 3;
@@ -13,6 +14,7 @@ public class Ships {
         setPos();
     }
     
+    //returns random int (may contain duplicate)
     int getRandom(){
         return shipPos = (int) (Math.random() * ((MAX - MIN)+1) + MIN );
     }
@@ -20,6 +22,7 @@ public class Ships {
     void setPos(){
         allPos[0] = getRandom();
         
+        //eliminates duplicate
         uniqueValueCheck = getRandom();
         while(uniqueValueCheck == allPos[0]){
             uniqueValueCheck = getRandom();
@@ -45,6 +48,7 @@ public class Ships {
         }
     }  
 }
+
 
 
 
