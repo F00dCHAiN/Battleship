@@ -18,7 +18,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-public class MainFrame {
+public final class MainFrame {
 
     final static int NUM_OF_BUTTONS = 9;
     private JFrame frame;
@@ -203,6 +203,7 @@ public class MainFrame {
         });
     }
 }
+
 
 
 

@@ -14,7 +14,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 
 
-public class StartMenu {
+public final class StartMenu {
     private JFrame frame;
     private JButton startButton, exitButton, aboutButton;
     private Font fontStartMenu, fontStartMenuHeader;
@@ -125,6 +125,7 @@ public class StartMenu {
         return playerName;
     }
 }
+
 
 
 
