@@ -59,7 +59,7 @@ public final class MainFrame {
         cursor2 = new Cursor(Cursor.HAND_CURSOR);
 
         for (int i = 0; i < NUM_OF_BUTTONS; i++) {
-            button[i] = new JButton(String.valueOf(buttonNamer));
+            button[i] = new JButton("" + (i+1));
             buttonNamer++;
             button[i].setCursor(cursor1);
             button[i].setBackground(Color.LIGHT_GRAY);
@@ -203,6 +203,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 
