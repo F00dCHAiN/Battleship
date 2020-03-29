@@ -55,8 +55,13 @@ public final class StartMenu {
         
         startButton.addActionListener((ActionEvent e) -> {
             System.out.println("Start button");
-            setPlayerName();
-            System.out.println("Player Name: " + playerName);
+            try{
+                setPlayerName();
+                System.out.println("Player Name: " + playerName);
+            }
+            catch(NullPointerException e1){
+                System.out.println("Cancel button");
+            }
         });
         
         exitButton.addActionListener((ActionEvent e) -> {
@@ -112,19 +117,28 @@ public final class StartMenu {
         frame.setVisible(true);
     }
     
-    void setPlayerName(){
+    void setPlayerName() throws NullPointerException{
         StartMenu.playerName = JOptionPane.showInputDialog(null,"Enter your name: ", "Player");
-        if(playerName == null/*if user presses cancel button*/ || playerName.equals("")){
+        if(playerName.isBlank()){
             StartMenu.playerName = "[No Player Name]";
         }
-        frame.dispose();
-        MainFrame mainFrame = new MainFrame();
+        if(playerName != null){ //if user does not press cancel button
+            frame.dispose();
+            MainFrame mainFrame = new MainFrame();
+        }
     }
     
     public static String getPlayerName(){
         return playerName;
     }
 }
+
+
+
+
+
+
+
 
 
 
