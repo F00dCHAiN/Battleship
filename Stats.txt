@@ -11,3 +11,12 @@ Name: Player | Hits: 3 | Misses: 2
 Name: Player | Hits: 2 | Misses: 3
 Name: testButton | Hits: 1 | Misses: 3
 Name: testbutton2 | Hits: 1 | Misses: 3
+Name: vai | Hits: 3 | Misses: 0
+Name: Player | Hits: 2 | Misses: 3
+Name: Player | Hits: 1 | Misses: 3
+Name: A | Hits: 3 | Misses: 2
+Name: B | Hits: 0 | Misses: 3
+Name: C | Hits: 2 | Misses: 3
+Name: D | Hits: 0 | Misses: 3
+Name: AIUB student | Hits: 0 | Misses: 3
+Name: E | Hits: 1 | Misses: 3

@@ -7,6 +7,7 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
@@ -16,6 +17,7 @@ public final class StatsFrame {
     private JFrame frame;
     private JTextArea textArea;
     private JScrollPane scrollPane;
+    private ImageIcon battleshipIcon;
     private JButton deleteButton;
     
     public StatsFrame(){
@@ -32,6 +34,9 @@ public final class StatsFrame {
         }
         
         //deleteStats();
+        
+        battleshipIcon = new ImageIcon(getClass().getResource("battleship.png"));
+        frame.setIconImage(battleshipIcon.getImage());
         
         frame.setBackground(Color.LIGHT_GRAY);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -59,6 +64,7 @@ public final class StatsFrame {
     }
     
 }
+
 
 
 
