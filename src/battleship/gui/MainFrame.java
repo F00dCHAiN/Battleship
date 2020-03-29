@@ -26,7 +26,6 @@ public final class MainFrame {
     private JPanel panel1, panel2, panel3;
     private final JButton[] button = new JButton[NUM_OF_BUTTONS];
     private JButton statsButton, howToPlayButton, restartButton;
-    private int buttonNamer = 1;
     private Cursor cursor1, cursor2;
     private JLabel shipImgLabel;
 
@@ -44,7 +43,8 @@ public final class MainFrame {
 
         panel3 = new JPanel();
         panel3.setBackground(new Color(179, 255, 255));
-
+        
+        //importing all the images
         shipImgDef = new ImageIcon(new ImageIcon(getClass().getResource("default.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         shipImgFirst = new ImageIcon(new ImageIcon(getClass().getResource("first.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
         shipImgSecond = new ImageIcon(new ImageIcon(getClass().getResource("second.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
@@ -60,7 +60,6 @@ public final class MainFrame {
 
         for (int i = 0; i < NUM_OF_BUTTONS; i++) {
             button[i] = new JButton("" + (i+1));
-            buttonNamer++;
             button[i].setCursor(cursor1);
             button[i].setBackground(Color.LIGHT_GRAY);
         }
@@ -87,7 +86,6 @@ public final class MainFrame {
             panel1.add(i);
         }
         frame.add(panel1, BorderLayout.SOUTH);
-        //frame.pack();
     }
 
     public void buttonListener() {
@@ -95,14 +93,14 @@ public final class MainFrame {
         Ships ships = new Ships();
         HitReg hitReg = new HitReg(player, ships);
 
-        //console log
+        //console log//////////////////
         int[] x = ships.getPos();
         System.out.print("Answers: ");
         for (int i : x) {
             System.out.print(i + " ");
         }
         System.out.println("");
-        //console log
+        //console log//////////////////
 
         final class shipImgChanger {
 
@@ -203,6 +201,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 
