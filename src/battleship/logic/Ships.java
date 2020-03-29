@@ -1,7 +1,7 @@
 
 package battleship.logic;
 
-public class Ships {
+public final class Ships {
     //dont change these
     final int MIN = 1;
     final int MAX = 9;
@@ -48,6 +48,7 @@ public class Ships {
         }
     }  
 }
+
 
 
 

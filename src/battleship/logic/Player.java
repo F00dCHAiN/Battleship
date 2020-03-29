@@ -1,7 +1,7 @@
 
 package battleship.logic;
 
-public class Player {
+public final class Player {
     int playerGuess;
     String playerName;
     
@@ -13,6 +13,7 @@ public class Player {
         return playerGuess;
     }    
 }
+
 
 
 
