@@ -2,7 +2,6 @@
 package battleship.gui;
 
 import java.awt.Color;
-import java.awt.FlowLayout;
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -40,7 +39,6 @@ public final class StatsFrame {
         
         frame.setBackground(Color.LIGHT_GRAY);
         frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        //frame.setLayout(new FlowLayout());
         frame.setResizable(false);
         frame.pack();
         frame.setLocationRelativeTo(null);
@@ -64,6 +62,7 @@ public final class StatsFrame {
     }
     
 }
+
 
 
 

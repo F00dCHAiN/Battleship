@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Formatter;
 import java.util.Scanner;
 
-public class Stats {
+public final class Stats {
 
     File stats;
     Formatter write;
@@ -74,6 +74,7 @@ public class Stats {
         }
     }
 }
+
 
 
 

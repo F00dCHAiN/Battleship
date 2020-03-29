@@ -21,3 +21,5 @@ Name: D | Hits: 0 | Misses: 3
 Name: AIUB student | Hits: 0 | Misses: 3
 Name: E | Hits: 1 | Misses: 3
 Name: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa | Hits: 1 | Misses: 3
+Name: Player | Hits: 1 | Misses: 3
+Name: Player | Hits: 0 | Misses: 3
