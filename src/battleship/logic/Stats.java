@@ -47,6 +47,7 @@ public final class Stats {
             fileWriter = new FileWriter("Stats.txt", true);
             write = new Formatter(fileWriter);
             write.format("Name: %s | Hits: %d | Misses: %d\r\n", StartMenu.getPlayerName(), hitStats, missStats);
+            System.out.println("Stats written into 'Stats.txt' successfully.");
         }catch(FileNotFoundException e2){
             System.out.println("Unable to write to file. Exception: " + e2);
         }catch(IOException e2){
@@ -74,6 +75,7 @@ public final class Stats {
         }
     }
 }
+
 
 
 
