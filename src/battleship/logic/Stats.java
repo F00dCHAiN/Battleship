@@ -34,7 +34,7 @@ public final class Stats {
             try {
                 stats.createNewFile();
                 System.out.println("New Stats.txt file created.");
-            } catch (Exception e1) {
+            } catch (IOException e1) {
                 System.out.println("Unable to create Stats.txt file. Exception: " + e1);
             }
         }else{
@@ -75,6 +75,7 @@ public final class Stats {
         }
     }
 }
+
 
 
 
