@@ -124,7 +124,7 @@ public final class StartMenu {
         }
         if(playerName != null){ //if user does not press cancel button
             frame.dispose();
-            MainFrame mainFrame = new MainFrame();
+            new MainFrame();
         }
     }
     
@@ -132,6 +132,23 @@ public final class StartMenu {
         return playerName;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
