@@ -83,11 +83,13 @@ public final class StartMenu {
             System.out.println("Exit button");
             int choice = JOptionPane.showConfirmDialog(null, "Do you really want to exit?", "Exit", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
             if(choice == JOptionPane.YES_OPTION){
+                System.out.println("Bye bye!");
                 System.exit(0);
             }
         });
         
         aboutButton.addActionListener((ActionEvent e) -> {
+            System.out.println("About button");
             JOptionPane.showMessageDialog(null, TextMessages.getCredits(), "About", JOptionPane.INFORMATION_MESSAGE);
         });
         
@@ -150,6 +152,7 @@ public final class StartMenu {
         return playerName;
     }
 }
+
 
 
 

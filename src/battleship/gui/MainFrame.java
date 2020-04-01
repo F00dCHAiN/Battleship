@@ -207,17 +207,21 @@ public final class MainFrame {
         panel2.setBackground(new Color(179, 255, 255));
 
         howToPlayButton.addActionListener((ActionEvent e) -> {
+            System.out.println("How To Play button");
             JOptionPane.showMessageDialog(null, TextMessages.getHowToPlayText(), "How To Play", JOptionPane.QUESTION_MESSAGE);
         });
         statsButton.addActionListener((ActionEvent e) -> {
+            System.out.println("Stats button");
             StatsFrame statsFrame = new StatsFrame();
         });
         restartButton.addActionListener((ActionEvent e) -> {
+            System.out.println("Restarting....");
             frame.dispose();
-            StartMenu startMenu = new StartMenu();
+            new StartMenu();
         });
     }
 }
+
 
 
 
