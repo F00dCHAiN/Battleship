@@ -168,8 +168,8 @@ public final class MainFrame {
             }
         }
         
-        NumberButtonListener[] numberButtonListener = new NumberButtonListener[9];
-        for(int n = 0; n<9; n++){
+        final NumberButtonListener[] numberButtonListener = new NumberButtonListener[9];
+        for(int n = 0; n<numberButtonListener.length; n++){
             numberButtonListener[n] = new NumberButtonListener(n);
         }
 
@@ -221,6 +221,9 @@ public final class MainFrame {
         });
     }
 }
+
+
+
 
 
 
