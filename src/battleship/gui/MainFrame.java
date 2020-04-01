@@ -19,6 +19,7 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 import javax.swing.border.TitledBorder;
 
 public final class MainFrame {
@@ -46,7 +47,8 @@ public final class MainFrame {
         panel1.setBackground(new Color(179, 255, 255));
 
         panel3 = new JPanel();
-        panel3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.green, 3), BorderFactory.createLineBorder(Color.yellow, 2)), BorderFactory.createLineBorder(Color.red, 2)));
+        Border compoundBorder = BorderFactory.createCompoundBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.green, 3), BorderFactory.createLineBorder(Color.yellow, 2)), BorderFactory.createLineBorder(Color.red, 2));
+        panel3.setBorder(BorderFactory.createTitledBorder(compoundBorder, "ENEMY SHIP", TitledBorder.CENTER, TitledBorder.BELOW_TOP));
         panel3.setBackground(new Color(179, 255, 255));
         
         //importing all the images
@@ -216,6 +218,8 @@ public final class MainFrame {
         });
     }
 }
+
+
 
 
 

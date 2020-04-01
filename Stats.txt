@@ -31,3 +31,5 @@ Name: Player | Hits: 2 | Misses: 3
 Name: Player 1 | Hits: 0 | Misses: 3
 Name: Samin Yaser | Hits: 3 | Misses: 0
 Name: Player | Hits: 2 | Misses: 3
+Name: Bordertest | Hits: 3 | Misses: 1
+Name: Bordertest2 | Hits: 2 | Misses: 3
