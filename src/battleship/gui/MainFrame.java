@@ -12,11 +12,14 @@ import javax.swing.JFrame;
 import java.awt.Cursor;
 import java.awt.FlowLayout;
 import java.awt.Image;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.TitledBorder;
 
 public final class MainFrame {
 
@@ -39,9 +42,11 @@ public final class MainFrame {
         frame.setIconImage(battleshipIcon.getImage());
 
         panel1 = new JPanel();
+        panel1.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black, 3), "Shoot Your Canons!"));
         panel1.setBackground(new Color(179, 255, 255));
 
         panel3 = new JPanel();
+        panel3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.green, 3), BorderFactory.createLineBorder(Color.yellow, 2)), BorderFactory.createLineBorder(Color.red, 2)));
         panel3.setBackground(new Color(179, 255, 255));
         
         //importing all the images
@@ -62,6 +67,7 @@ public final class MainFrame {
             button[i] = new JButton("" + (i+1));
             button[i].setCursor(cursor1);
             button[i].setBackground(Color.LIGHT_GRAY);
+            button[i].setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
         }
 
         grLayout();
@@ -169,18 +175,27 @@ public final class MainFrame {
 
     void miscButtons() {
         panel2 = new JPanel();
-        statsButton = new JButton("Stats");
-        restartButton = new JButton("Restart");
-        howToPlayButton = new JButton("How To Play");
+        panel2.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black, 3), "Options", TitledBorder.RIGHT, TitledBorder.BOTTOM));
+        
+        statsButton = new JButton("   Stats   ");
+        restartButton = new JButton("   Restart   ");
+        howToPlayButton = new JButton("   How To Play  ");
+        
         statsButton.setCursor(cursor2);
         restartButton.setCursor(cursor2);
         howToPlayButton.setCursor(cursor2);
+        
         statsButton.setBackground(Color.LIGHT_GRAY);
         restartButton.setBackground(Color.LIGHT_GRAY);
         howToPlayButton.setBackground(Color.LIGHT_GRAY);
+        
         statsButton.setToolTipText("Click to see your stats");
         restartButton.setToolTipText("Restart the game");
         howToPlayButton.setToolTipText("Learn how to play the game");
+        
+        statsButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        restartButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        howToPlayButton.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
 
         panel2.setLayout(new FlowLayout(FlowLayout.CENTER, 80, 10));
         panel2.add(howToPlayButton);
@@ -201,6 +216,22 @@ public final class MainFrame {
         });
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

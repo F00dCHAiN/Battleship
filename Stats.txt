@@ -28,3 +28,6 @@ Name: sda | Hits: 0 | Misses: 3
 Name: ABC | Hits: 0 | Misses: 3
 Name: statsWriten | Hits: 3 | Misses: 0
 Name: Player | Hits: 2 | Misses: 3
+Name: Player 1 | Hits: 0 | Misses: 3
+Name: Samin Yaser | Hits: 3 | Misses: 0
+Name: Player | Hits: 2 | Misses: 3

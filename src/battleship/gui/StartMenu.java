@@ -6,12 +6,15 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.border.BevelBorder;
+import javax.swing.border.Border;
 
 
 public final class StartMenu {
@@ -24,6 +27,10 @@ public final class StartMenu {
     private Cursor startMenuCursor;
     private Cursor gitCursor;
     private static String playerName;
+    private Border buttonBorder;
+    private Border raisedBevelBorder;
+    private Border loweredBevelBorder;
+    private Border frameBorder;
     
     public StartMenu(){
         initComponents();
@@ -52,6 +59,14 @@ public final class StartMenu {
         startButton.setCursor(startMenuCursor);
         exitButton.setCursor(startMenuCursor);
         aboutButton.setCursor(startMenuCursor);
+        
+        raisedBevelBorder = BorderFactory.createBevelBorder(BevelBorder.RAISED);
+        loweredBevelBorder = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
+        buttonBorder = BorderFactory.createCompoundBorder(raisedBevelBorder, loweredBevelBorder);
+        
+        startButton.setBorder(buttonBorder);
+        exitButton.setBorder(buttonBorder);
+        aboutButton.setBorder(buttonBorder);
         
         startButton.addActionListener((ActionEvent e) -> {
             System.out.println("Start button");
@@ -107,6 +122,9 @@ public final class StartMenu {
         gitCursor = new Cursor(Cursor.TEXT_CURSOR);
         gitTextField.setCursor(gitCursor);
         
+        frameBorder = BorderFactory.createLineBorder(Color.CYAN, 5);
+        
+        frame.getRootPane().setBorder(frameBorder);
         frame.getContentPane().setBackground(new Color(66, 180, 255));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
@@ -132,6 +150,12 @@ public final class StartMenu {
         return playerName;
     }
 }
+
+
+
+
+
+
 
 
 
