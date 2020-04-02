@@ -19,6 +19,9 @@ public final class TextMessages {
             + "SAZZAD HOSSAIN<br/>"
             + "Assistant Professor, AIUB<br/>";
     
+    private static final String FILE_DELETED = "<html>'Stats.txt' file has been deleted.<br/>"
+            + "Please close the Stats window to refresh.</htmk>";
+    
     private static final String GITHUB_LINK = "https://github.com/F00dCHAiN/Battleship.git";
 
     public static String getHowToPlayText() {
@@ -44,7 +47,12 @@ public final class TextMessages {
     public static String getGitLink() {
         return GITHUB_LINK;
     }
+    
+    public static String getFileDeletedMessage(){
+        return FILE_DELETED;
+    }
 }
+
 
 
 
