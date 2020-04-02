@@ -7,7 +7,6 @@ import java.awt.event.ActionEvent;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import javax.swing.ImageIcon;
@@ -56,7 +55,7 @@ public final class StatsFrame {
         frame.setVisible(true);
     }
 
-    void textAreaText() throws IOException, FileNotFoundException {
+    void textAreaText() throws IOException {
         textArea = new JTextArea(20, 30);
         scrollPane = new JScrollPane(textArea);
         textArea.setEditable(false);
@@ -79,6 +78,7 @@ public final class StatsFrame {
         });
     }
 }
+
 
 
 
