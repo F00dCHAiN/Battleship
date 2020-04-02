@@ -36,3 +36,6 @@ Name: Bordertest2 | Hits: 2 | Misses: 3
 Name: Player | Hits: 2 | Misses: 3
 Name: Player | Hits: 1 | Misses: 3
 Name: Player | Hits: 2 | Misses: 3
+Name: Player | Hits: 3 | Misses: 0
+Name: Player | Hits: 1 | Misses: 3
+Name: Player | Hits: 3 | Misses: 0

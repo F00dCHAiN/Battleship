@@ -52,10 +52,11 @@ public final class MainFrame {
         panel3.setBackground(new Color(179, 255, 255));
         
         //importing all the images
-        shipImgDef = new ImageIcon(new ImageIcon(getClass().getResource("default.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-        shipImgFirst = new ImageIcon(new ImageIcon(getClass().getResource("first.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-        shipImgSecond = new ImageIcon(new ImageIcon(getClass().getResource("second.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
-        shipImgThird = new ImageIcon(new ImageIcon(getClass().getResource("third.png")).getImage().getScaledInstance(200, 200, Image.SCALE_SMOOTH));
+        final int IMG_SIZE = 250;
+        shipImgDef = new ImageIcon(new ImageIcon(getClass().getResource("default.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
+        shipImgFirst = new ImageIcon(new ImageIcon(getClass().getResource("first.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
+        shipImgSecond = new ImageIcon(new ImageIcon(getClass().getResource("second.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
+        shipImgThird = new ImageIcon(new ImageIcon(getClass().getResource("third.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
 
         shipImgLabel = new JLabel(shipImgDef);
         panel3.add(shipImgLabel);
@@ -221,6 +222,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 
