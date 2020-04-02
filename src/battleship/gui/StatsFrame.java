@@ -7,7 +7,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import javax.swing.ImageIcon;
-import javax.swing.JButton;
+//import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
@@ -17,7 +17,7 @@ public final class StatsFrame {
     private JTextArea textArea;
     private JScrollPane scrollPane;
     private ImageIcon battleshipIcon;
-    private JButton deleteButton;
+    //private JButton deleteButton;
     
     public StatsFrame(){
         initComponents();
@@ -55,12 +55,14 @@ public final class StatsFrame {
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Stats.txt")));
         
         textArea.read(reader, "Pls wait....");
+        reader.close();
     }
     
     void deleteStats(){
         //might add this later
     }
 }
+
 
 
 

@@ -12,7 +12,7 @@ public final class TextMessages {
     private static final String LOSE_MESSAGE = "<html>You have failed to sink the enemy ship!<br/>"
             + "Click \"Restart\" to play again.</html>";
 
-    private static final String STATS_SAVED = "You stats have been saved";
+    private static final String STATS_SAVED = "You stats have been saved.";
     
     private static final String CREDITS = "<html>Made by: Yaser, Samin<br/>"
             + "Under the Supervision of<br/>"
@@ -45,6 +45,7 @@ public final class TextMessages {
         return GITHUB_LINK;
     }
 }
+
 
 
 

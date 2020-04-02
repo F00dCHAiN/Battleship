@@ -5,7 +5,7 @@ import battleship.gui.StartMenu;
 
 final public class Battleship {
     public static void main(String[] args) {
-        StartMenu startMenu = new StartMenu();
+        new StartMenu();
         
         System.out.println("Program started");
         System.out.println("---------------------");
@@ -13,6 +13,7 @@ final public class Battleship {
         System.out.println("---------------------");
     }
 }
+
 
 
 

@@ -42,16 +42,18 @@ public final class MainFrame {
         battleshipIcon = new ImageIcon(getClass().getResource("battleship.png"));
         frame.setIconImage(battleshipIcon.getImage());
 
+        //Panel for grid layout
         panel1 = new JPanel();
         panel1.setBorder(BorderFactory.createTitledBorder(BorderFactory.createLineBorder(Color.black, 3), "Shoot Your Canons!"));
         panel1.setBackground(new Color(179, 255, 255));
 
+        //Image panel
         panel3 = new JPanel();
         Border compoundBorder = BorderFactory.createCompoundBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.green, 3), BorderFactory.createLineBorder(Color.yellow, 2)), BorderFactory.createLineBorder(Color.red, 2));
         panel3.setBorder(BorderFactory.createTitledBorder(compoundBorder, "ENEMY SHIP", TitledBorder.CENTER, TitledBorder.BELOW_TOP));
         panel3.setBackground(new Color(179, 255, 255));
         
-        //importing all the images
+        //importing all the images and setting their size
         final int IMG_SIZE = 250;
         shipImgDef = new ImageIcon(new ImageIcon(getClass().getResource("default.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
         shipImgFirst = new ImageIcon(new ImageIcon(getClass().getResource("first.png")).getImage().getScaledInstance(IMG_SIZE, IMG_SIZE, Image.SCALE_SMOOTH));
@@ -222,6 +224,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 
