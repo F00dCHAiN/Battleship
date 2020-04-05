@@ -16,9 +16,8 @@ import javax.swing.JOptionPane;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 
-public final class StatsFrame {
+public final class StatsFrame extends JFrame {
 
-    private JFrame frame;
     private JTextArea textArea;
     private JScrollPane scrollPane;
     private ImageIcon battleshipIcon;
@@ -29,8 +28,7 @@ public final class StatsFrame {
     }
 
     void initComponents() {
-        frame = new JFrame();
-        frame.setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
+        setLayout(new FlowLayout(FlowLayout.CENTER, 10, 10));
 
         try {
             textAreaText();
@@ -38,28 +36,26 @@ public final class StatsFrame {
             textArea.setText("Stats are empty for now.\nStart playing to see your stats here!");
         }
 
-        
         deleteStats();
-        
 
         battleshipIcon = new ImageIcon(getClass().getResource("battleship.png"));
-        frame.setIconImage(battleshipIcon.getImage());
+        setIconImage(battleshipIcon.getImage());
 
-        frame.add(deleteButton);
-        frame.setBackground(Color.LIGHT_GRAY);
-        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-        frame.setResizable(false);
-        frame.pack();
-        frame.setLocationRelativeTo(null);
-        frame.setTitle("Stats");
-        frame.setVisible(true);
+        add(deleteButton);
+        setBackground(Color.LIGHT_GRAY);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        setResizable(false);
+        pack();
+        setLocationRelativeTo(null);
+        setTitle("Stats");
+        setVisible(true);
     }
 
     void textAreaText() throws IOException {
         textArea = new JTextArea(20, 30);
         scrollPane = new JScrollPane(textArea);
         textArea.setEditable(false);
-        frame.add(scrollPane);
+        add(scrollPane);
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("Stats.txt")));
 
@@ -72,16 +68,12 @@ public final class StatsFrame {
         deleteButton.setToolTipText("Delete 'Stats.txt' file");
 
         deleteButton.addActionListener((ActionEvent e) -> {
+
             File stats = new File("Stats.txt");
             stats.delete();
+
             JOptionPane.showMessageDialog(null, TextMessages.getFileDeletedMessage(), "File Deleted", JOptionPane.WARNING_MESSAGE);
         });
     }
 }
-
-
-
-
-
-
 
