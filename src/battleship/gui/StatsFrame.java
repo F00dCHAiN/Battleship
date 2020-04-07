@@ -68,12 +68,17 @@ public final class StatsFrame extends JFrame {
         deleteButton.setToolTipText("Delete 'Stats.txt' file");
 
         deleteButton.addActionListener((ActionEvent e) -> {
-
-            File stats = new File("Stats.txt");
-            stats.delete();
-
-            JOptionPane.showMessageDialog(null, TextMessages.getFileDeletedMessage(), "File Deleted", JOptionPane.WARNING_MESSAGE);
+            try {
+                File stats = new File("Stats.txt");
+                stats.delete();
+                JOptionPane.showMessageDialog(null, TextMessages.getFileDeletedMessage(), "File Deleted", JOptionPane.WARNING_MESSAGE);
+            } catch (NullPointerException nullPointerExc) {
+                JOptionPane.showMessageDialog(null, "Unable to delete Stats.txt file.", "Error", JOptionPane.WARNING_MESSAGE);
+            }
         });
     }
 }
+
+
+
 
