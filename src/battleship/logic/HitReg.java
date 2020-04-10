@@ -8,8 +8,8 @@ public final class HitReg {
     boolean isHit = false;
     public int numOfHits = 0;
     public int numOfMisses = 0;
-    Ships ships;
-    Player player;
+    private Ships ships;
+    private Player player;
     public boolean guiLabel;//used in NumberButtonListener class
     
     public HitReg(Player player, Ships ships){
@@ -61,6 +61,7 @@ public final class HitReg {
         }
     }
 }
+
 
 
 

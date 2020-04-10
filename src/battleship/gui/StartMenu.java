@@ -6,6 +6,7 @@ import java.awt.Color;
 import java.awt.Cursor;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -25,7 +26,7 @@ public final class StartMenu {
     private JLabel header, headerImg, gitLabel;
     private JTextField gitTextField;
     private Cursor startMenuCursor;
-    private Cursor gitCursor;
+    private Cursor textCursor;
     private static String playerName;
     private Border buttonBorder;
     private Border raisedBevelBorder;
@@ -72,14 +73,16 @@ public final class StartMenu {
         exitButton.setBorder(buttonBorder);
         aboutButton.setBorder(buttonBorder);
         
-        startButton.addActionListener((ActionEvent e) -> {
-            System.out.println("Start button");
-            try{
-                setPlayerName();
-                System.out.println("Player Name: " + playerName);
-            }
-            catch(NullPointerException e1){
-                System.out.println("Cancel button");
+        startButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Start button");
+                try{
+                    setPlayerName();
+                    System.out.println("Player Name: " + playerName);
+                }
+                catch(NullPointerException e1){
+                    System.out.println("Cancel button");
+                }
             }
         });
         
@@ -125,8 +128,8 @@ public final class StartMenu {
         gitTextField.setEditable(false);
         frame.add(gitTextField);
         gitTextField.setBounds(150, 420, 250, 30);
-        gitCursor = new Cursor(Cursor.TEXT_CURSOR);
-        gitTextField.setCursor(gitCursor);
+        textCursor = new Cursor(Cursor.TEXT_CURSOR);
+        gitTextField.setCursor(textCursor);
         
         frameBorder = BorderFactory.createLineBorder(Color.darkGray, 5);
         
@@ -156,6 +159,7 @@ public final class StartMenu {
         return playerName;
     }
 }
+
 
 
 

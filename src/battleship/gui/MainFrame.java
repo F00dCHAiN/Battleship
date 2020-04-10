@@ -113,6 +113,7 @@ public final class MainFrame {
         System.out.println("");
         //console log//////////////////
 
+        //this class changes the image of the ship
         final class shipImgChanger {
 
             shipImgChanger() {
@@ -224,6 +225,7 @@ public final class MainFrame {
         });
     }
 }
+
 
 
 

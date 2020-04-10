@@ -40,7 +40,7 @@ public final class Ships {
         return allPos;
     }
     
-    void deletePos(int pos){
+    public void deletePos(int pos){
         for(int i = 0; i<MAX_SHIPS; i++){
             if(allPos[i] == pos){
                 allPos[i] = -1;
@@ -48,6 +48,7 @@ public final class Ships {
         }
     }  
 }
+
 
 
 
