@@ -34,7 +34,7 @@ public final class StartMenu {
     private Border frameBorder;
     
     public StartMenu(){
-        System.out.println("Program started");
+        System.out.println("Program starting...");
         System.out.println("---------------------");
         System.out.println("\tLog");
         System.out.println("---------------------");
@@ -159,6 +159,7 @@ public final class StartMenu {
         return playerName;
     }
 }
+
 
 
 
