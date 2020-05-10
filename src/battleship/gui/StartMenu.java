@@ -131,7 +131,7 @@ public final class StartMenu {
         textCursor = new Cursor(Cursor.TEXT_CURSOR);
         gitTextField.setCursor(textCursor);
         
-        frameBorder = BorderFactory.createLineBorder(Color.darkGray, 5);
+        frameBorder = BorderFactory.createLineBorder(Color.WHITE, 5);
         
         frame.getRootPane().setBorder(frameBorder);
         frame.getContentPane().setBackground(new Color(66, 180, 255));
@@ -159,6 +159,7 @@ public final class StartMenu {
         return playerName;
     }
 }
+
 
 
 
